@@ -8,12 +8,14 @@ Funciones:
 
 from langchain_community.document_loaders import PyPDFLoader, TextLoader, Docx2txtLoader
 import os
+import logging
+logging.getLogger("pypdf").setLevel(logging.ERROR)
 
 
-def load_documents(directory_path):
+def load_documents(directory_path): # Carga documentos desde un directorio específico y devuelve una lista de documentos.
     documents = []
 
-    for filename in os.listdir(directory_path):
+    for filename in os.listdir(directory_path): # Itera sobre los archivos en el directorio especificado
         filepath = os.path.join(directory_path, filename)
 
         if filename.endswith(".pdf"):
@@ -31,6 +33,6 @@ def load_documents(directory_path):
     return documents
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Prueba la función de carga de documentos
     docs = load_documents("data/documents")
     print(f"Documentos cargados: {len(docs)}")

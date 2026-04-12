@@ -9,20 +9,20 @@ Funciones:
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
-def split_documents(documents):
+def split_documents(documents): # Toma una lista de documentos y devuelve una lista de fragmentos generados a partir de esos documentos.
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,  # Tamaño del chunk en caracteres
         chunk_overlap=150  # Cantidad de caracteres que se superponen entre chunks para mantener contexto
     )
 
-    chunks = splitter.split_documents(documents)
+    chunks = splitter.split_documents(documents) # Utiliza el splitter para dividir los documentos en fragmentos
     return chunks
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Prueba la función de división de documentos
     from loaders import load_documents
 
-    docs = load_documents("data/documents")
-    chunks = split_documents(docs)
+    docs = load_documents("data/documents") # Carga los documentos desde el directorio especificado
+    chunks = split_documents(docs) # Divide los documentos cargados en fragmentos utilizando la función split_documents
 
-    print(f"Chunks generados: {len(chunks)}")
+    print(f"Chunks generados: {len(chunks)}")    
