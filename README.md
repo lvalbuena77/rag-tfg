@@ -115,7 +115,7 @@ Entorno de desarrollo:
 
 Los documentos se procesarán utilizando un **Recursive Character Text Splitter** con solapamiento (overlap) del 10–15%.
 
-Esto permite evitar la pérdida de contexto cuando un párrafo se divide entre fragmentos.
+Esto permite evitar la pérdida de contexto cuando un párrafo se divide en fragmentos.
 
 Ejemplo de configuración:
 chunk_size = 1000
@@ -199,6 +199,11 @@ rag-tfg/
 - Diseño de la arquitectura del sistema
 - Preparación del corpus documental
 
+- Entorno de desarrollo configurado
+- Corpus documental generado (Markdown, PDF, DOCX)
+- Módulo de carga de documentos implementado
+- Módulo de fragmentación (text splitting) implementado
+- Pruebas iniciales del pipeline de ingesta completadas
 ---
 
 # 11. Próximos pasos
@@ -211,6 +216,14 @@ rag-tfg/
 6. Implementar el pipeline RAG
 7. Desarrollar la interfaz de usuario
 8. Evaluar el sistema
+
+9. Implementar generación de embeddings
+10. Configurar base de datos vectorial (ChromaDB)
+11. Implementar sistema de recuperación
+12. Integrar LLM mediante Ollama
+13. Construir pipeline RAG completo
+14. Desarrollar interfaz con Streamlit
+15. Evaluar sistema con RAGAS
 
 
 # 12. Instalación y ejecución del proyecto
