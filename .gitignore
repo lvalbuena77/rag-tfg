@@ -3,10 +3,10 @@ __pycache__/
 *.pyc
 .env
 chroma_db/
+.vscode/
 
 # Documentos del TFG que no van al repo
 2025 DESCRIPCION CONTENIDO MEMORIA.pdf
-P11_06_F08b Plantilla TFT individual_v02.docx
 tfg_RAG.md
 
 memoria/
