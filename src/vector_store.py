@@ -6,7 +6,7 @@ Permite persistir los datos en disco para reutilizarlos posteriormente sin neces
 
 import shutil
 import os
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
 class VectorStoreManager: # Clase para gestionar el almacenamiento de vectores (embeddings) utilizando ChromaDB
