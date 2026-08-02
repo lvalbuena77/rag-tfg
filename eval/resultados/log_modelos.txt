@@ -1,0 +1,271 @@
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:46: DeprecationWarning: Importing Faithfulness from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import Faithfulness
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:46: DeprecationWarning: Importing AnswerRelevancy from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import AnswerRelevancy
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:46: DeprecationWarning: Importing ContextPrecision from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import ContextPrecision
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:46: DeprecationWarning: Importing ContextRecall from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import ContextRecall
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Cargando dataset de evaluación...
+  Modo reducido: usando 5 de 20 preguntas.
+Inicializando modelos RAGAS locales...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3508.71it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:94: DeprecationWarning: LangchainEmbeddingsWrapper is deprecated and will be removed in a future version. Use the modern embedding providers instead: embedding_factory('openai', model='text-embedding-3-small', client=openai_client) or from ragas.embeddings import OpenAIEmbeddings, GoogleEmbeddings, HuggingFaceEmbeddings
+  return LangchainEmbeddingsWrapper(LCHFEmbeddings(model_name=EMBEDDING_MODEL))
+
+======================================================================
+EXPERIMENTO 2 — Comparativa de modelos LLM
+  Top-k: 4 | Chunk size: 1000
+======================================================================
+
+  Modelo: llama3.1
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 4612.52it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+    [01/5] ¿Cuántos intentos fallidos de inicio de sesión bloquean automátic...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 4805.65it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+    [02/5] ¿Qué hardware recibe un nuevo empleado del área de ingeniería en ...
+    [03/5] ¿Qué ramas del repositorio tienen push directo prohibido según la...
+    [04/5] ¿Cómo se debe incluir la API Key en las peticiones a la API de la...
+    [05/5] ¿Qué tecnología se utiliza como API Gateway en la arquitectura de...
+Evaluating:   0%|          | 0/20 [00:00<?, ?it/s]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   5%|5         | 1/20 [1:29:20<28:17:38, 5361.00s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  85%|########5 | 17/20 [1:44:19<13:55, 278.52s/it]   Evaluating: 100%|##########| 20/20 [1:44:19<00:00, 312.98s/it]
+    Resultados: {'faithfulness': np.float64(0.7033), 'answer_relevancy': np.float64(0.5261), 'context_precision': np.float64(0.8422), 'context_recall': np.float64(1.0)}
+
+  Modelo: llama3.2:1b
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7409.03it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:94: DeprecationWarning: LangchainEmbeddingsWrapper is deprecated and will be removed in a future version. Use the modern embedding providers instead: embedding_factory('openai', model='text-embedding-3-small', client=openai_client) or from ragas.embeddings import OpenAIEmbeddings, GoogleEmbeddings, HuggingFaceEmbeddings
+  return LangchainEmbeddingsWrapper(LCHFEmbeddings(model_name=EMBEDDING_MODEL))
+    [01/5] ¿Cuántos intentos fallidos de inicio de sesión bloquean automátic...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7395.34it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+    [02/5] ¿Qué hardware recibe un nuevo empleado del área de ingeniería en ...
+    [03/5] ¿Qué ramas del repositorio tienen push directo prohibido según la...
+    [04/5] ¿Cómo se debe incluir la API Key en las peticiones a la API de la...
+    [05/5] ¿Qué tecnología se utiliza como API Gateway en la arquitectura de...
+Evaluating:   0%|          | 0/20 [00:00<?, ?it/s]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Exception raised in Job[0]: InstructorRetryException(<failed_attempts>
+
+<generation number="1">
+<exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-858', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "StatementFaithfulnessAnswer": {\n            "properties": {\n                "statement": {\n                    "description": "the original statement, word-by-word",\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "description": "the reason of the verdict",\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "verdict": {\n                    "description": "the verdict(0/1) of the faithfulness.",\n                    "title": "Verdict",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "verdict"\n            ],\n            "title": "StatementFaithfulnessAnswer",\n            "type": "object"\n        }\n    },\n    "properties": {\n        "statements": {\n            "$ref": "#/$defs/StatementFaithfulnessAnswer"\n        },\n        "title": "Statements",\n        "type": "array"\n    },\n    "required": [\n        "statements"\n    ],\n    "title": "NLIStatementOutput",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779436851, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=726, prompt_tokens=8890, total_tokens=9616, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+<generation number="2">
+<exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-557', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "StatementFaithfulnessAnswer": {\n            "properties": {\n                "statement": {\n                    "description": "the original statement, word-by-word",\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "description": "the reason of the verdict",\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "verdict": {\n                    "description": "the verdict(0/1) of the faithfulness.",\n                    "title": "Verdict",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "verdict"\n            ],\n            "title": "StatementFaithfulnessAnswer",\n            "type": "object"\n        }\n    },\n    "properties": {\n        "statements": {\n            "$ref": "#/$defs/StatementFaithfulnessAnswer"\n        },\n        "title": "Statements",\n        "type": "array"\n    },\n    "required": [\n        "statements"\n    ],\n    "title": "NLIStatementOutput",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779436894, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=726, prompt_tokens=8890, total_tokens=9616, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+<generation number="3">
+<exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-122', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "StatementFaithfulnessAnswer": {\n            "properties": {\n                "statement": {\n                    "description": "the original statement, word-by-word",\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "description": "the reason of the verdict",\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "verdict": {\n                    "description": "the verdict(0/1) of the faithfulness.",\n                    "title": "Verdict",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "verdict"\n            ],\n            "title": "StatementFaithfulnessAnswer",\n            "type": "object"\n        }\n    },\n    "properties": {\n        "statements": {\n            "$ref": "#/$defs/StatementFaithfulnessAnswer"\n        },\n        "title": "Statements",\n        "type": "array"\n    },\n    "required": [\n        "statements"\n    ],\n    "title": "NLIStatementOutput",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779436956, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=726, prompt_tokens=8890, total_tokens=9616, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+</failed_attempts>
+
+<last_exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</last_exception>)
+Exception raised in Job[7]: InstructorRetryException(<failed_attempts>
+
+<generation number="1">
+<exception>
+    The output is incomplete due to a max_tokens length limit.
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-647', choices=[Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "classifications": [\n        {\n            "statement": "El nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779437380, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=3072, prompt_tokens=7998, total_tokens=11070, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+<generation number="2">
+<exception>
+    The output is incomplete due to a max_tokens length limit.
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-211', choices=[Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "classifications": [\n        {\n            "statement": "El nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779437489, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=3072, prompt_tokens=7998, total_tokens=11070, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+<generation number="3">
+<exception>
+    The output is incomplete due to a max_tokens length limit.
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-582', choices=[Choice(finish_reason='length', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "classifications": [\n        {\n            "statement": "El nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first day.",\n            "attributed": 1\n        },\n        {\n            "statement": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones.",\n            "reason": "The new employee receives the necessary equipment on their first', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779437599, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=3072, prompt_tokens=7998, total_tokens=11070, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+</failed_attempts>
+
+<last_exception>
+    The output is incomplete due to a max_tokens length limit.
+</last_exception>)
+Exception raised in Job[12]: InstructorRetryException(<failed_attempts>
+
+<generation number="1">
+<exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-157', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "StatementFaithfulnessAnswer": {\n            "properties": {\n                "statement": {\n                    "description": "the original statement, word-by-word",\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "description": "the reason of the verdict",\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "verdict": {\n                    "description": "the verdict(0/1) of the faithfulness.",\n                    "title": "Verdict",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "verdict"\n            ],\n            "title": "StatementFaithfulnessAnswer",\n            "type": "object"\n        }\n    },\n    "properties": {\n        "statements": {\n            "$ref": "#/$defs/StatementFaithfulnessAnswer"\n        },\n        "title": "Statements",\n        "type": "array"\n    },\n    "required": [\n        "statements"\n    ],\n    "title": "NLIStatementOutput",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779437900, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=726, prompt_tokens=9008, total_tokens=9734, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+<generation number="2">
+<exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-877', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "StatementFaithfulnessAnswer": {\n            "properties": {\n                "statement": {\n                    "description": "the original statement, word-by-word",\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "description": "the reason of the verdict",\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "verdict": {\n                    "description": "the verdict(0/1) of the faithfulness.",\n                    "title": "Verdict",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "verdict"\n            ],\n            "title": "StatementFaithfulnessAnswer",\n            "type": "object"\n        }\n    },\n    "properties": {\n        "statements": {\n            "$ref": "#/$defs/StatementFaithfulnessAnswer"\n        },\n        "title": "Statements",\n        "type": "array"\n    },\n    "required": [\n        "statements"\n    ],\n    "title": "NLIStatementOutput",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779437951, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=726, prompt_tokens=9008, total_tokens=9734, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+<generation number="3">
+<exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-493', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "StatementFaithfulnessAnswer": {\n            "properties": {\n                "statement": {\n                    "description": "the original statement, word-by-word",\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "description": "the reason of the verdict",\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "verdict": {\n                    "description": "the verdict(0/1) of the faithfulness.",\n                    "title": "Verdict",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "verdict"\n            ],\n            "title": "StatementFaithfulnessAnswer",\n            "type": "object"\n        }\n    },\n    "properties": {\n        "statements": {\n            "$ref": "#/$defs/StatementFaithfulnessAnswer"\n        },\n        "title": "Statements",\n        "type": "array"\n    },\n    "required": [\n        "statements"\n    ],\n    "title": "NLIStatementOutput",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779438015, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=726, prompt_tokens=9008, total_tokens=9734, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+</failed_attempts>
+
+<last_exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</last_exception>)
+Evaluating:   5%|5         | 1/20 [25:30<8:04:43, 1530.71s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Exception raised in Job[19]: InstructorRetryException(<failed_attempts>
+
+<generation number="1">
+<exception>
+    1 validation error for ContextRecallClassifications
+classifications
+  Field required [type=missing, input_value={'$defs': {'ContextRecall...ions', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-469', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "ContextRecallClassification": {\n            "properties": {\n                "statement": {\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "attributed": {\n                    "title": "Attributed",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "attributed"\n            ],\n            "title": "ContextRecallClassification",\n            "type": "object"\n        },\n        "classifications": {\n            "items": {\n                "$ref": "#/$defs/ContextRecallClassification"\n            },\n            "title": "Classifications",\n            "type": "array"\n        }\n    },\n    "required": [\n        "classifications"\n    ],\n    "title": "ContextRecallClassifications",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779438443, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=562, prompt_tokens=9101, total_tokens=9663, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+<generation number="2">
+<exception>
+    1 validation error for ContextRecallClassifications
+classifications
+  Field required [type=missing, input_value={'$defs': {'ContextRecall...ions', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-337', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "ContextRecallClassification": {\n            "properties": {\n                "statement": {\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "attributed": {\n                    "title": "Attributed",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "attributed"\n            ],\n            "title": "ContextRecallClassification",\n            "type": "object"\n        },\n        "classifications": {\n            "$ref": "#/$defs/ContextRecallClassification"\n        }\n    },\n    "required": [\n        "classifications"\n    ],\n    "title": "ContextRecallClassifications",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779438480, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=562, prompt_tokens=9101, total_tokens=9663, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+<generation number="3">
+<exception>
+    1 validation error for ContextRecallClassifications
+classifications
+  Field required [type=missing, input_value={'$defs': {'ContextRecall...ions', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</exception>
+<completion>
+    ChatCompletion(id='chatcmpl-626', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "$defs": {\n        "ContextRecallClassification": {\n            "properties": {\n                "statement": {\n                    "title": "Statement",\n                    "type": "string"\n                },\n                "reason": {\n                    "title": "Reason",\n                    "type": "string"\n                },\n                "attributed": {\n                    "title": "Attributed",\n                    "type": "integer"\n                }\n            },\n            "required": [\n                "statement",\n                "reason",\n                "attributed"\n            ],\n            "title": "ContextRecallClassification",\n            "type": "object"\n        },\n        "classifications": {\n            "$ref": "#/$defs/ContextRecallClassification"\n        }\n    },\n    "required": [\n        "classifications"\n    ],\n    "title": "ContextRecallClassifications",\n    "type": "object"\n}', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None))], created=1779438530, model='llama3.2:1b', object='chat.completion', service_tier=None, system_fingerprint='fp_ollama', usage=CompletionUsage(completion_tokens=562, prompt_tokens=9101, total_tokens=9663, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=None, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=None), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+</completion>
+</generation>
+
+</failed_attempts>
+
+<last_exception>
+    1 validation error for ContextRecallClassifications
+classifications
+  Field required [type=missing, input_value={'$defs': {'ContextRecall...ions', 'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</last_exception>)
+Evaluating:  85%|########5 | 17/20 [29:37<03:56, 78.92s/it]   Evaluating: 100%|##########| 20/20 [29:37<00:00, 88.86s/it]
+    Resultados: {'faithfulness': np.float64(0.25), 'answer_relevancy': np.float64(0.4099), 'context_precision': np.float64(1.0), 'context_recall': np.float64(0.7222)}
+
+======================================================================
+    configuracion      modelo  top_k  chunk_size  faithfulness  answer_relevancy  context_precision  context_recall
+   model=llama3.1    llama3.1      4        1000        0.7033            0.5261             0.8422          1.0000
+model=llama3.2:1b llama3.2:1b      4        1000        0.2500            0.4099             1.0000          0.7222
+======================================================================
+
+Tabla guardada en: C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\resultados\comparativa_modelos_20260522_102850.csv
+
+Comparativa completada.

@@ -1,0 +1,104 @@
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:46: DeprecationWarning: Importing Faithfulness from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import Faithfulness
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:46: DeprecationWarning: Importing AnswerRelevancy from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import AnswerRelevancy
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:46: DeprecationWarning: Importing ContextPrecision from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import ContextPrecision
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:46: DeprecationWarning: Importing ContextRecall from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import ContextRecall
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Cargando dataset de evaluación...
+  Modo reducido: usando 5 de 20 preguntas.
+Inicializando modelos RAGAS locales...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 8234.31it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\compare_configurations.py:94: DeprecationWarning: LangchainEmbeddingsWrapper is deprecated and will be removed in a future version. Use the modern embedding providers instead: embedding_factory('openai', model='text-embedding-3-small', client=openai_client) or from ragas.embeddings import OpenAIEmbeddings, GoogleEmbeddings, HuggingFaceEmbeddings
+  return LangchainEmbeddingsWrapper(LCHFEmbeddings(model_name=EMBEDDING_MODEL))
+
+======================================================================
+EXPERIMENTO 1 — Comparativa de top-k
+  Modelo: llama3.1 | Chunk size: 1000
+======================================================================
+
+  top-k = 2
+    [01/5] ¿Cuántos intentos fallidos de inicio de sesión bloquean automátic...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7406.24it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+    [02/5] ¿Qué hardware recibe un nuevo empleado del área de ingeniería en ...
+    [03/5] ¿Qué ramas del repositorio tienen push directo prohibido según la...
+    [04/5] ¿Cómo se debe incluir la API Key en las peticiones a la API de la...
+    [05/5] ¿Qué tecnología se utiliza como API Gateway en la arquitectura de...
+Evaluating:   0%|          | 0/20 [00:00<?, ?it/s]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   5%|5         | 1/20 [1:03:14<20:01:30, 3794.23s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  85%|########5 | 17/20 [1:12:44<09:39, 193.16s/it]   Evaluating: 100%|##########| 20/20 [1:12:44<00:00, 218.20s/it]
+    Resultados: {'faithfulness': np.float64(0.8), 'answer_relevancy': np.float64(0.4568), 'context_precision': np.float64(0.8833), 'context_recall': np.float64(1.0)}
+
+  top-k = 4
+    [01/5] ¿Cuántos intentos fallidos de inicio de sesión bloquean automátic...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 3952.18it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+    [02/5] ¿Qué hardware recibe un nuevo empleado del área de ingeniería en ...
+    [03/5] ¿Qué ramas del repositorio tienen push directo prohibido según la...
+    [04/5] ¿Cómo se debe incluir la API Key en las peticiones a la API de la...
+    [05/5] ¿Qué tecnología se utiliza como API Gateway en la arquitectura de...
+Evaluating:   0%|          | 0/20 [00:00<?, ?it/s]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   5%|5         | 1/20 [1:32:05<29:09:53, 5525.98s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  85%|########5 | 17/20 [1:47:20<14:19, 286.40s/it]   Evaluating: 100%|##########| 20/20 [1:47:20<00:00, 322.04s/it]
+    Resultados: {'faithfulness': np.float64(0.7033), 'answer_relevancy': np.float64(0.5261), 'context_precision': np.float64(0.8422), 'context_recall': np.float64(1.0)}
+
+  top-k = 6
+    [01/5] ¿Cuántos intentos fallidos de inicio de sesión bloquean automátic...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 5731.14it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+    [02/5] ¿Qué hardware recibe un nuevo empleado del área de ingeniería en ...
+    [03/5] ¿Qué ramas del repositorio tienen push directo prohibido según la...
+    [04/5] ¿Cómo se debe incluir la API Key en las peticiones a la API de la...
+    [05/5] ¿Qué tecnología se utiliza como API Gateway en la arquitectura de...
+Evaluating:   0%|          | 0/20 [00:00<?, ?it/s]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   5%|5         | 1/20 [1:57:49<37:18:39, 7069.43s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  85%|########5 | 17/20 [2:15:32<18:00, 360.01s/it]   Evaluating: 100%|##########| 20/20 [2:15:32<00:00, 406.65s/it]
+    Resultados: {'faithfulness': np.float64(0.8267), 'answer_relevancy': np.float64(0.4226), 'context_precision': np.float64(0.8115), 'context_recall': np.float64(0.9)}
+
+======================================================================
+configuracion   modelo  top_k  chunk_size  faithfulness  answer_relevancy  context_precision  context_recall
+      top_k=2 llama3.1      2        1000        0.8000            0.4568             0.8833             1.0
+      top_k=4 llama3.1      4        1000        0.7033            0.5261             0.8422             1.0
+      top_k=6 llama3.1      6        1000        0.8267            0.4226             0.8115             0.9
+======================================================================
+
+Tabla guardada en: C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\resultados\comparativa_topk_20260521_195056.csv
+
+Comparativa completada.

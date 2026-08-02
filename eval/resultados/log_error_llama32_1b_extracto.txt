@@ -1,0 +1,106 @@
+=========================================================
+EXTRACTO DE LOG — Comparativa de modelos LLM
+Modelo:  llama3.2:1b (1B parámetros, Q4_K_M)
+Script:  eval/compare_configurations.py --models --limit 5
+Fecha:   22 de mayo de 2026
+=========================================================
+
+[Salida previa al error]
+
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+
+---------------------------------------------------------
+Exception raised in Job[0]: InstructorRetryException(
+<failed_attempts>
+
+  <generation number="1">
+    <exception>
+        1 validation error for NLIStatementOutput
+    statements
+      Field required [type=missing,
+        input_value={'$defs': {'StatementFait...tput', 'type': 'object'},
+        input_type=dict]
+        For further information visit https://errors.pydantic.dev/2.12/v/missing
+    </exception>
+    <completion>
+        [Respuesta del modelo llama3.2:1b — el modelo devolvió el esquema JSON
+         (NLIStatementOutput) en lugar de una instancia válida del mismo]
+
+        model='llama3.2:1b'
+        content: {
+            "$defs": { "StatementFaithfulnessAnswer": { ... } },
+            "properties": {
+                "statements": { "$ref": "#/$defs/StatementFaithfulnessAnswer" },
+                "title": "Statements",
+                "type": "array"
+            },
+            "required": ["statements"],
+            "title": "NLIStatementOutput",
+            "type": "object"
+        }
+        [El modelo reprodujo literalmente la definición del esquema en lugar
+         de rellenarlo con los valores de la evaluación.]
+    </completion>
+  </generation>
+
+  <generation number="2">
+    <exception>
+        1 validation error for NLIStatementOutput
+    statements
+      Field required [type=missing, ...]
+    </exception>
+    [Mismo error repetido en el segundo intento de reintento automático]
+  </generation>
+
+  <generation number="3">
+    <exception>
+        1 validation error for NLIStatementOutput
+    statements
+      Field required [type=missing, ...]
+    </exception>
+    [Mismo error en el tercer y último intento. RAGAS agota los reintentos.]
+  </generation>
+
+</failed_attempts>
+
+<last_exception>
+    1 validation error for NLIStatementOutput
+statements
+  Field required [type=missing, input_value={'$defs': {'StatementFait...tput',
+    'type': 'object'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+</last_exception>)
+---------------------------------------------------------
+
+[El mismo patrón se repite para Job[7], Job[12], Job[19]...]
+
+Exception raised in Job[7]:  InstructorRetryException — NLIStatementOutput Field required
+Exception raised in Job[12]: InstructorRetryException — NLIStatementOutput Field required
+Exception raised in Job[19]: InstructorRetryException — ContextRecallClassifications Field required
+
+=========================================================
+DIAGNÓSTICO
+
+RAGAS solicita al modelo que rellene una estructura JSON del tipo:
+
+  {
+    "statements": [
+      {"statement": "...", "reason": "...", "verdict": 0}
+    ]
+  }
+
+El modelo llama3.2:1b (1B parámetros) no fue capaz de seguir la instrucción.
+En lugar de devolver una instancia del esquema, devolvió la definición del
+propio esquema JSON (el "type": "object" con "$defs"), que es lo que recibió
+como parte del prompt de instrucción.
+
+Esto indica que el modelo de 1B carece de la capacidad de seguimiento de
+instrucciones estructuradas necesaria para actuar como juez en el framework
+RAGAS. Los 3 reintentos automáticos (InstructorRetry) tampoco resolvieron
+el problema, ya que el modelo producía idénticamente el mismo output erróneo.
+
+El log completo se encuentra en: eval/resultados/log_modelos.txt
+=========================================================
