@@ -1,0 +1,78 @@
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\evaluate_ragas.py:36: DeprecationWarning: Importing Faithfulness from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import Faithfulness
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\evaluate_ragas.py:36: DeprecationWarning: Importing AnswerRelevancy from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import AnswerRelevancy
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\evaluate_ragas.py:36: DeprecationWarning: Importing ContextPrecision from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import ContextPrecision
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\evaluate_ragas.py:36: DeprecationWarning: Importing ContextRecall from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import ContextRecall
+  from ragas.metrics import Faithfulness, AnswerRelevancy, ContextPrecision, ContextRecall
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+============================================================
+EVALUACIÓN RAGAS — Sistema RAG (modelos locales)
+  Modelo LLM  : llama3.1
+  Top-k       : 4
+  Dataset     : C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\dataset_evaluacion.json
+  Embeddings  : sentence-transformers/all-MiniLM-L6-v2
+============================================================
+
+[1/4] Cargando dataset de evaluación...
+      Modo prueba: usando 10 de 20 preguntas.
+      10 preguntas cargadas.
+
+[2/4] Ejecutando pipeline RAG...
+  [01/10] Procesando: ¿Cuántos intentos fallidos de inicio de sesión bloquean automáticament...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7626.82it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+  [02/10] Procesando: ¿Qué hardware recibe un nuevo empleado del área de ingeniería en su pr...
+  [03/10] Procesando: ¿Qué ramas del repositorio tienen push directo prohibido según la estr...
+  [04/10] Procesando: ¿Cómo se debe incluir la API Key en las peticiones a la API de la plat...
+  [05/10] Procesando: ¿Qué tecnología se utiliza como API Gateway en la arquitectura de la p...
+  [06/10] Procesando: ¿Qué formatos de archivo admite la plataforma y cuál es el tamaño máxi...
+  [07/10] Procesando: ¿Cuál es el tiempo de entrega habitual para hardware adicional solicit...
+  [08/10] Procesando: ¿Cuál es el formato estándar para los mensajes de commit según la guía...
+  [09/10] Procesando: ¿Cuánto tiempo tarda en expirar un token JWT obtenido mediante la API?...
+  [10/10] Procesando: ¿Qué base de datos vectorial se utiliza en desarrollo y cuál está prev...
+
+[3/4] Configurando RAGAS con modelos locales...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 7908.42it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\evaluate_ragas.py:75: DeprecationWarning: LangchainEmbeddingsWrapper is deprecated and will be removed in a future version. Use the modern embedding providers instead: embedding_factory('openai', model='text-embedding-3-small', client=openai_client) or from ragas.embeddings import OpenAIEmbeddings, GoogleEmbeddings, HuggingFaceEmbeddings
+  return LangchainEmbeddingsWrapper(LCHFEmbeddings(model_name=EMBEDDING_MODEL))
+
+[4/4] Ejecutando evaluación RAGAS (puede tardar varios minutos)...
+Evaluating:   0%|          | 0/40 [00:00<?, ?it/s]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:   2%|2         | 1/40 [1:26:11<56:01:19, 5171.26s/it]LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  42%|####2     | 17/40 [2:57:39<3:29:04, 545.42s/it] LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+LLM returned 1 generations instead of requested 3. Proceeding with 1 generations.
+Evaluating:  82%|########2 | 33/40 [3:38:05<37:05, 317.87s/it]  Evaluating: 100%|##########| 40/40 [3:38:05<00:00, 327.14s/it]
+
+Resultados guardados en: C:\Users\usuario\Desktop\viu\grado_informatica\CURSO_2025_26\tfg\rag-tfg\eval\resultados\ragas_llama3.1_k4_20260521_093217.csv
+
+============================================================
+RESUMEN — Métricas medias del sistema
+  Modelo LLM : llama3.1
+  Top-k      : 4
+------------------------------------------------------------
+  faithfulness              0.6850
+  answer_relevancy          0.4547
+  context_precision         0.7477
+  context_recall            1.0000
+============================================================
