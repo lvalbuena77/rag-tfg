@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "documento_origen": "faq_plataforma.md",
+    "pregunta": "¿Cuántos intentos fallidos de inicio de sesión bloquean automáticamente una cuenta?",
+    "respuesta_referencia": "Las cuentas se bloquean automáticamente tras 5 intentos fallidos de inicio de sesión consecutivos. Para desbloquearla es necesario contactar con el administrador del sistema o el equipo de IT."
+  },
+  {
+    "id": 5,
+    "documento_origen": "manual_incorporacion_equipo.md",
+    "pregunta": "¿Qué hardware recibe un nuevo empleado del área de ingeniería en su primer día?",
+    "respuesta_referencia": "El primer día el nuevo empleado recoge en recepción: portátil corporativo (MacBook Pro o ThinkPad según perfil), periféricos básicos (monitor, teclado, ratón) y tarjeta de acceso a las instalaciones."
+  },
+  {
+    "id": 9,
+    "documento_origen": "guia_desarrollo_software.md",
+    "pregunta": "¿Qué ramas del repositorio tienen push directo prohibido según la estrategia Git Flow?",
+    "respuesta_referencia": "Las ramas main y develop tienen push directo prohibido. La rama main requiere Pull Request revisado y develop requiere Pull Request."
+  },
+  {
+    "id": 13,
+    "documento_origen": "api_referencia_interna.md",
+    "pregunta": "¿Cómo se debe incluir la API Key en las peticiones a la API de la plataforma?",
+    "respuesta_referencia": "La API Key se incluye en la cabecera de cada petición con el formato: Authorization: Bearer <tu_api_key>. Las claves se gestionan desde Perfil → Desarrollador → API Keys."
+  },
+  {
+    "id": 17,
+    "documento_origen": "arquitectura_microservicios.md",
+    "pregunta": "¿Qué tecnología se utiliza como API Gateway en la arquitectura de la plataforma?",
+    "respuesta_referencia": "Se utiliza Nginx con configuración personalizada como API Gateway. Sus responsabilidades incluyen terminación TLS con certificados gestionados por cert-manager, autenticación y validación de tokens JWT."
+  },
+  {
+    "id": 2,
+    "documento_origen": "faq_plataforma.md",
+    "pregunta": "¿Qué formatos de archivo admite la plataforma y cuál es el tamaño máximo permitido para documentos PDF?",
+    "respuesta_referencia": "La plataforma admite PDF (hasta 50 MB), DOCX/DOC (hasta 25 MB), Markdown (.md, hasta 10 MB) y texto plano (.txt, hasta 10 MB)."
+  },
+  {
+    "id": 6,
+    "documento_origen": "manual_incorporacion_equipo.md",
+    "pregunta": "¿Cuál es el tiempo de entrega habitual para hardware adicional solicitado a través del portal de IT?",
+    "respuesta_referencia": "El tiempo de entrega habitual para hardware adicional solicitado en el portal de IT con justificación de negocio es de 3 a 5 días."
+  },
+  {
+    "id": 10,
+    "documento_origen": "guia_desarrollo_software.md",
+    "pregunta": "¿Cuál es el formato estándar para los mensajes de commit según la guía de desarrollo?",
+    "respuesta_referencia": "Los commits deben seguir el estándar Conventional Commits con el formato: <tipo>(<scope>): <descripción corta>, con un cuerpo opcional explicativo."
+  },
+  {
+    "id": 14,
+    "documento_origen": "api_referencia_interna.md",
+    "pregunta": "¿Cuánto tiempo tarda en expirar un token JWT obtenido mediante la API?",
+    "respuesta_referencia": "Los tokens JWT expiran a las 8 horas. Para renovar el token sin re-autenticarse se puede usar el endpoint POST /auth/refresh con el token actual en la cabecera."
+  },
+  {
+    "id": 18,
+    "documento_origen": "arquitectura_microservicios.md",
+    "pregunta": "¿Qué base de datos vectorial se utiliza en desarrollo y cuál está prevista para el entorno de producción?",
+    "respuesta_referencia": "En desarrollo se utiliza ChromaDB como base de datos vectorial local. Para el entorno de producción está previsto Qdrant, que ofrece mayor escalabilidad."
+  },
+  {
+    "id": 3,
+    "documento_origen": "faq_plataforma.md",
+    "pregunta": "¿Cuánto tiempo dura una sesión activa por inactividad en la plataforma?",
+    "respuesta_referencia": "Las sesiones tienen una duración máxima de 8 horas de inactividad. Las sesiones activas se renuevan automáticamente mientras el usuario navega."
+  },
+  {
+    "id": 7,
+    "documento_origen": "manual_incorporacion_equipo.md",
+    "pregunta": "¿Quién aprueba el acceso al repositorio GitLab corporativo para un nuevo empleado?",
+    "respuesta_referencia": "El acceso al GitLab corporativo (usuario con acceso a proyectos del equipo) debe ser aprobado por el Tech Lead del equipo."
+  },
+  {
+    "id": 11,
+    "documento_origen": "guia_desarrollo_software.md",
+    "pregunta": "¿Qué sistemas operativos son compatibles con el entorno de desarrollo de la organización?",
+    "respuesta_referencia": "Los sistemas operativos compatibles son: Linux (Ubuntu 22.04+), macOS (Ventura+) y Windows 11 con WSL2."
+  },
+  {
+    "id": 15,
+    "documento_origen": "api_referencia_interna.md",
+    "pregunta": "¿Cuál es la URL base de la API REST de la plataforma de gestión del conocimiento?",
+    "respuesta_referencia": "La URL base de la API es: https://plataforma.empresa.com/api/v1"
+  },
+  {
+    "id": 19,
+    "documento_origen": "arquitectura_microservicios.md",
+    "pregunta": "¿Cuáles son los cuatro principios de diseño de la arquitectura de la plataforma?",
+    "respuesta_referencia": "Los cuatro principios de diseño son: privacidad por diseño (ningún dato sale de la infraestructura corporativa), modularidad (cada componente es reemplazable independientemente), observabilidad (logging, métricas y trazas distribuidas) y escalabilidad horizontal."
+  },
+  {
+    "id": 4,
+    "documento_origen": "faq_plataforma.md",
+    "pregunta": "¿Qué opciones de segundo factor están disponibles para la autenticación MFA en la plataforma?",
+    "respuesta_referencia": "Las opciones disponibles para MFA son: aplicación de autenticación (Google Authenticator, Microsoft Authenticator), código SMS al número corporativo registrado, o llave de seguridad física (FIDO2). Se configura desde Perfil → Seguridad → Autenticación multifactor."
+  },
+  {
+    "id": 8,
+    "documento_origen": "manual_incorporacion_equipo.md",
+    "pregunta": "¿Con qué correo debe contactarse si no se han recibido las credenciales de acceso antes del primer día?",
+    "respuesta_referencia": "Si no se ha recibido alguno de los elementos el día anterior a la incorporación, se debe contactar con it-onboarding@empresa.com."
+  },
+  {
+    "id": 12,
+    "documento_origen": "guia_desarrollo_software.md",
+    "pregunta": "¿Qué versión mínima de Git se requiere y cómo se configura el correo corporativo?",
+    "respuesta_referencia": "Se requiere Git 2.40 o superior. El correo corporativo se configura con el comando: git config --global user.email \"nombre@empresa.com\"."
+  },
+  {
+    "id": 16,
+    "documento_origen": "api_referencia_interna.md",
+    "pregunta": "¿Qué parámetros acepta el endpoint POST /query para realizar una consulta semántica?",
+    "respuesta_referencia": "El endpoint POST /query acepta los parámetros: query (la consulta en lenguaje natural), collection_ids (lista de colecciones donde buscar), top_k (número de fragmentos a recuperar), model (modelo LLM a utilizar), language (idioma de la respuesta) e include_sources (booleano para incluir fuentes)."
+  },
+  {
+    "id": 20,
+    "documento_origen": "arquitectura_microservicios.md",
+    "pregunta": "¿Qué tecnología se utiliza como cola de mensajes en la arquitectura del sistema?",
+    "respuesta_referencia": "Redis se utiliza como Message Queue (cola de mensajes) en la arquitectura. Los trabajadores de procesamiento (Celery Workers) consumen los eventos publicados en esta cola."
+  }
+]

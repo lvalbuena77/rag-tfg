@@ -1,0 +1,4 @@
+configuracion,modelo,top_k,chunk_size,faithfulness,answer_relevancy,context_precision,context_recall
+top_k=2,llama3.1,2,1000,0.8,0.4568,0.8833,1.0
+top_k=4,llama3.1,4,1000,0.7033,0.5261,0.8422,1.0
+top_k=6,llama3.1,6,1000,0.8267,0.4226,0.8115,0.9
